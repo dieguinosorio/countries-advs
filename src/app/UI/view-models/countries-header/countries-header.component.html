@@ -1,0 +1,21 @@
+<div class="header">
+  <div class="header-description">
+    <p class="header-description-info">Find any <strong class="header-description-info-secundary">country</strong> <br> in the world.</p>
+  </div>
+  <div class="img-header">
+    <img src="/assets/img/header/word.png" alt="world">
+  </div>
+  <div class="header-search">
+    <form [formGroup]="form">
+        <input type="text" formControlName="filterText" placeholder="Search country">
+        <select name="select-options" formControlName="filterOptions" class="header-select-filter">
+          <option value="all">Show All</option>
+          <option value="favorites">Favorites</option>
+          <option *ngFor="let item of continents" [value]="item">{{item}}</option>
+        </select>
+        <div class="header-img-search">
+          <img src="/assets/img/header/Background.png" alt="search">
+        </div>
+    </form>
+  </div>
+</div>

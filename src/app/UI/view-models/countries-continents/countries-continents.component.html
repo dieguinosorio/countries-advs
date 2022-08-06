@@ -1,0 +1,8 @@
+<div class="card-continents">
+  <div class="continents" *ngFor="let item of continents">
+    <p class="continent-title">{{item}}</p>
+    <countries-continents-items [continent]="item"></countries-continents-items>
+  </div>
+
+</div>
+<notfound *ngIf="!continents.length"></notfound>

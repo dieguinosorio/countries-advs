@@ -1,0 +1,19 @@
+export interface Countri{
+  name:string,
+  alpha2Code:string,
+  alpha3Code:string,
+  capital:string,
+  subregion:string,
+  region:string,
+  population:number,
+  area:number,
+  timezones:string[],
+  borders:string[],
+  nativeName:string,
+  numericCode:number,
+  flags:object,
+  currencies:object[],
+  languages:object[],
+  flag:string,
+  favorite?:boolean
+}

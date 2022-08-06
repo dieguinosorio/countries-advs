@@ -1,0 +1,7 @@
+<div class="list-countries">
+  <div class="list-countries-item" *ngFor="let item of countries" (click)="onSelectedCountri(item)">
+    <img [src]="item.flag" [alt]="item.name">
+    {{item.name}}
+    <img class="star" src="/assets/img/countries-item/star.png" *ngIf="item.favorite" [alt]="item.name">
+  </div>
+</div>

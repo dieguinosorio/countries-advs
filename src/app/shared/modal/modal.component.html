@@ -1,0 +1,23 @@
+<div class="modal-countri-background" [ngStyle]="{'display': !modalShow ?  'none' : 'block'}">
+  <div class="modal">
+    <div class="modal-header">
+      <p class="modal-header-title">{{countri?.name}}
+        <img *ngIf="countri?.favorite"  class="img-modal-star" src="../../../assets/img/modal/star.png" (click)="onClickUnFavorite()" alt="favorite">
+        <img *ngIf="!countri?.favorite"  class="img-modal-star" src="../../../assets/img/modal/unstar.png" (click)="onClickFavorite()" alt="unfavorite">
+      </p>
+
+      <img class="modal-img-closed" src="../../../assets/img/modal/closed.png" alt="closed" (click)="onClosedModal()">
+    </div>
+    <br>
+    <div class="modal-body">
+      <b>Región:</b> {{countri?.region}}<br>
+      <b>Pupulation:</b> {{countri?.population}}<br>
+      <b>Capital:</b> {{countri?.capital}}<br>
+      <b>Currency:</b> {{countri?.currencies[0]['name']}}<br>
+      <b>Languaje:</b> {{countri?.languages[0]['nativeName']}}<br>
+      <b>Border Countries:</b> {{countri?.borders?.join(', ') }}<br>
+      <b>Flag:</b><br>
+      <img [src]="countri?.flag" alt="test">
+    </div>
+  </div>
+</div>

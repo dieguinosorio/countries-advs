@@ -1,0 +1,28 @@
+export interface IReadyEntity {
+  name: string,
+  topLevelDomain : string[],
+  alpha2Code: string,
+  alpha3Code: string,
+  callingCodes: string[],
+  capital: string,
+  altSpellings:string[] ,
+  subregion: string
+  region: string,
+  population: number,
+  latlng: number[],
+  demonym: string,
+  area: number,
+  gini: number,
+  timezones: string[],
+  borders:string[],
+  nativeName: string,
+  numericCode: number,
+  flags: object,
+  currencies: any[],
+  languages: object[],
+  translations: object[],
+  flag: string,
+  regionalBlocs:object[],
+  cioc: string,
+  independent: boolean
+}
